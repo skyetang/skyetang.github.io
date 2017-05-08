@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://skye.space">
-  <title>Archives | skye</title>
+  <title>skye</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习总结，技术博客，前端">
-<meta property="og:type" content="website">
+  <meta name="description" content="###hexo是什么？在使用hexo搭建博客之前，需要先了解一下，什么是hexo?官方有这样一句话来描述hexo：A fast, simple &amp;amp; powerful blog framework。译为快速，简便，强大的博客框架。 那么既然是一个博客框架，而非我们平时用的内容管理系统，比如wordpress,ghost等，他们之间存在什么样区别？ ###wordpress与hexo的区别：">
+<meta name="keywords">
+<meta property="og:type" content="article">
 <meta property="og:title" content="skye">
-<meta property="og:url" content="http://skye.space/archives/index.html">
+<meta property="og:url" content="http://skye.space/2017/05/04/hexo快速搭建个人博客/index.html">
 <meta property="og:site_name" content="skye">
-<meta property="og:description" content="学习总结，技术博客，前端">
+<meta property="og:description" content="###hexo是什么？在使用hexo搭建博客之前，需要先了解一下，什么是hexo?官方有这样一句话来描述hexo：A fast, simple &amp;amp; powerful blog framework。译为快速，简便，强大的博客框架。 那么既然是一个博客框架，而非我们平时用的内容管理系统，比如wordpress,ghost等，他们之间存在什么样区别？ ###wordpress与hexo的区别：">
+<meta property="og:updated_time" content="2017-05-08T14:49:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="skye">
-<meta name="twitter:description" content="学习总结，技术博客，前端">
+<meta name="twitter:description" content="###hexo是什么？在使用hexo搭建博客之前，需要先了解一下，什么是hexo?官方有这样一句话来描述hexo：A fast, simple &amp;amp; powerful blog framework。译为快速，简便，强大的博客框架。 那么既然是一个博客框架，而非我们平时用的内容管理系统，比如wordpress,ghost等，他们之间存在什么样区别？ ###wordpress与hexo的区别：">
   
     <link rel="alternative" href="/atom.xml" title="skye" type="application/atom+xml">
   
@@ -144,70 +146,140 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hexo快速搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###hexo是什么？<br>在使用hexo搭建博客之前，需要先了解一下，什么是hexo?官方有这样一句话来描述hexo：A fast, simple &amp; powerful blog framework。译为快速，简便，强大的博客框架。</p>
+<p>那么既然是一个博客框架，而非我们平时用的内容管理系统，比如wordpress,ghost等，他们之间存在什么样区别？</p>
+<p>###wordpress与hexo的区别：</p>
+<p>wordpress等内容管理系统，他们的组成部份大概由服务器，wordpress，mysql数据库三部分组成.通过在线编辑，博文数据存储在数据库中，再通过动态查询数据，生成文章内容进行浏览，当然也可以生成静态页面，存储在服务器内，直接浏览页面。</p>
+<p>hexo这个框架，是在本地创建md文件，编辑好之后，生成静态html文件,再上传到服务器，无需数据库，如果你将文件上传至github仓库中，通过三级域名进行访问，连服务器都省了。</p>
+<p>###第一步：安装hexo<br>以上知道，我们的hexo其实是一个本地工作的框架。<br>我们要安装在自己的本地环境中，而他运行依赖于nodejs，所以，在安装hexo之前，你要确保你已经安装好了nodejs和npm。</p>
+<p>如果你还没有安装nodejs，那么请去<a href="http://www.nodejs.org" target="_blank" rel="external">这里</a>挑选适合你系统版本的安装包，下载到本地，然后直接狂点下一步安装就好啦。接下来，你就可以尽情地使用如下命令来安装hexo了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//安装hexo插件</div><div class="line">npm install hexo -g</div><div class="line">//在当前目录生成一个blog项目</div><div class="line">hexo init blog</div><div class="line">//进入到blog文件内</div><div class="line">cd blog</div><div class="line">//安装hexo系统所需的依赖文件</div><div class="line">npm install</div><div class="line">//启动服务器</div><div class="line">hexo server</div><div class="line">通过http://localhost:4000 即可在本地查看博客效果</div></pre></td></tr></table></figure></p>
+<p>###第二步：创建github.io的仓库<br>没有<a href="http://www.github.com" target="_blank" rel="external">github</a>帐号的，请去创建一个。<br>登录之后，在你的头像左边有个+号，点击里面的【new repository】新建仓库。<br>这里要注意的是仓库的命名，比如我的的github用户名为：skyetang,那么，这个仓库名字就为：skyetang.github.io。</p>
+<p>###第三步：配置本地hexo<br>找到之前新建的blog文件夹，进入之后，找到_config.yml文件，将里面发布数据改成如下（注意，冒号后面有空格），这里只列关键的配置，还有更多信息都可以在这个文件当中配置,比如：博客名，关键字，头像等等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/skyetang/skyetang.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>###第四步：创建文章并发布<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//安装发布文章所需的插件</div><div class="line">npm install npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//新建文章，然后通过md编辑器进行编辑你想要写的内容</div><div class="line">hexo new &apos;my-first-page&apos;</div><div class="line">//生成静态页面到public</div><div class="line">hexo generate</div><div class="line">//发布</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>然后在浏览器中输入之前建立的仓库名如：<a href="http://skyetang.github.io" target="_blank" rel="external">skyetang.github.io</a> 就可以进行访问了。</p>
+<p>至此，就利用hexo搭建好了自己的免费博客，是不是方便又简单.</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/04/hexo快速搭建个人博客/" class="archive-article-date">
-  	<time datetime="2017-05-04T15:32:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-04</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://skye.space/2017/05/04/hexo快速搭建个人博客/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/26/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-26T14:29:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/26/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2017/04/26/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -230,8 +302,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
